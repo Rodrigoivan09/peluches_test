@@ -123,35 +123,39 @@
         }
 
         /* Ajustes para la orientación horizontal */
-        @media (orientation: landscape) {
-            body {
-                justify-content: flex-start;
-            }
+@media (orientation: landscape) {
+    body {
+        justify-content: flex-start;
+    }
 
-            h2 {
-                display: none; /* Ocultar el letrero en la vista horizontal */
-            }
+    h2 {
+        display: none; /* Ocultar el letrero en la vista horizontal */
+    }
 
-            .camera-container {
-                margin-top: 0px; /* Mover el contenedor de captura hacia arriba */
-                width: 100vw; /* Contenedor de captura en toda la pantalla */
-                height: 80vh; /* Hacer el contenedor de captura más pequeño de abajo hacia arriba */
-                justify-content: flex-end; /* Asegurarse de que el botón de captura esté en la esquina inferior derecha */
-            }
+    .camera-container {
+        margin-top: 0px; /* Mover el contenedor de captura hacia arriba */
+        width: 100vw; /* Contenedor de captura en toda la pantalla */
+        height: 80vh; /* Hacer el contenedor de captura más pequeño de abajo hacia arriba */
+        display: flex;
+        justify-content: center; /* Centrar los elementos dentro del contenedor */
+        align-items: flex-start; /* Asegurarse de que el botón esté en la parte superior */
+        position: relative; /* Necesario para posicionar el botón dentro */
+    }
 
-            .button-container {
-                position: absolute;
-                bottom: 50px;
-                right: 10px;
-            }
+    .button-container {
+        position: absolute;
+        top: 20px; /* Ajusta este valor para mover el botón más arriba o más abajo */
+        right: 10px;
+    }
 
-            .capture-btn {
-                width: 80px;
-                height: 80px;
-                background-color: rgba(255, 255, 255, 0.7); /* Botón gris transparente */
-                border: 5px solid rgba(255, 255, 255, 0.5);
-            }
-        }
+    .capture-btn {
+        width: 80px;
+        height: 80px;
+        background-color: rgba(255, 255, 255, 0.7); /* Botón gris transparente */
+        border: 5px solid rgba(255, 255, 255, 0.5);
+    }
+}
+
 
         /* Ajustes para la orientación vertical */
         @media (orientation: portrait) {
